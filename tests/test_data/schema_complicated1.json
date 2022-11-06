@@ -1,0 +1,619 @@
+{
+  "definitions" : {
+    "record:org.apache.nifi.nifiRecord" : {
+      "type" : "object",
+      "required" : [ "taskId", "extOrderId", "taskStatus", "taskControlStatus", "documentVersion", "buId", "storeId", "priority", "created", "lastUpdateInformation", "customerId", "employeeId", "pointOfGiveAway", "dateOfGiveAway", "dateOfGiveAwayEnd", "pickingDeadline", "storageLocation", "currentStorageLocations", "customerType", "comment", "totalAmount", "currency", "stockDecrease", "offline", "trackId", "transportationType", "stockRebook", "notificationStatus", "lines", "linkedObjects" ],
+      "additionalProperties" : false,
+      "properties" : {
+        "taskId" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "extOrderId" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "taskStatus" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "taskControlStatus" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "documentVersion" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "integer",
+            "minimum" : -9223372036854775808,
+            "maximum" : 9223372036854775807
+          } ]
+        },
+        "buId" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "integer",
+            "minimum" : -9223372036854775808,
+            "maximum" : 9223372036854775807
+          } ]
+        },
+        "storeId" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "integer",
+            "minimum" : -9223372036854775808,
+            "maximum" : 9223372036854775807
+          } ]
+        },
+        "priority" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "created" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "$ref" : "#/definitions/record:org.apache.nifi.createdType"
+          } ]
+        },
+        "lastUpdateInformation" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "$ref" : "#/definitions/record:org.apache.nifi.lastUpdateInformationType"
+          } ]
+        },
+        "customerId" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "employeeId" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "pointOfGiveAway" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "$ref" : "#/definitions/record:org.apache.nifi.pointOfGiveAwayType"
+          } ]
+        },
+        "dateOfGiveAway" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "dateOfGiveAwayEnd" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "pickingDeadline" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "storageLocation" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "currentStorageLocations" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          } ]
+        },
+        "customerType" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "comment" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "totalAmount" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "number"
+          } ]
+        },
+        "currency" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "stockDecrease" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "boolean"
+          } ]
+        },
+        "offline" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "boolean"
+          } ]
+        },
+        "trackId" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "transportationType" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "stockRebook" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "boolean"
+          } ]
+        },
+        "notificationStatus" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "lines" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/record:org.apache.nifi.linesType"
+            }
+          } ]
+        },
+        "linkedObjects" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/record:org.apache.nifi.linkedObjectsType"
+            }
+          } ]
+        }
+      }
+    },
+    "record:org.apache.nifi.createdType" : {
+      "type" : "object",
+      "required" : [ "createdBy", "created" ],
+      "additionalProperties" : false,
+      "properties" : {
+        "createdBy" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "created" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        }
+      }
+    },
+    "record:org.apache.nifi.lastUpdateInformationType" : {
+      "type" : "object",
+      "required" : [ "updatedBy", "updated" ],
+      "additionalProperties" : false,
+      "properties" : {
+        "updatedBy" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "updated" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        }
+      }
+    },
+    "record:org.apache.nifi.pointOfGiveAwayType" : {
+      "type" : "object",
+      "required" : [ "selected", "available" ],
+      "additionalProperties" : false,
+      "properties" : {
+        "selected" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "available" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          } ]
+        }
+      }
+    },
+    "record:org.apache.nifi.linesType" : {
+      "type" : "object",
+      "required" : [ "lineId", "extOrderLineId", "productId", "lineStatus", "lineControlStatus", "orderedQuantity", "confirmedQuantity", "assignedQuantity", "pickedQuantity", "controlledQuantity", "allowedForGiveAwayQuantity", "givenAwayQuantity", "returnedQuantity", "sellingScheme", "stockSource", "productPrice", "lineAmount", "currency", "markingFlag", "operations", "source" ],
+      "additionalProperties" : false,
+      "properties" : {
+        "lineId" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "extOrderLineId" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "productId" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "lineStatus" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "lineControlStatus" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "orderedQuantity" : {
+          "oneOf" : [ {
+            "type" : "number"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "confirmedQuantity" : {
+          "oneOf" : [ {
+            "type" : "number"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "assignedQuantity" : {
+          "oneOf" : [ {
+            "type" : "number"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "pickedQuantity" : {
+          "oneOf" : [ {
+            "type" : "number"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "controlledQuantity" : {
+          "oneOf" : [ {
+            "type" : "number"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "allowedForGiveAwayQuantity" : {
+          "oneOf" : [ {
+            "type" : "number"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "givenAwayQuantity" : {
+          "oneOf" : [ {
+            "type" : "number"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "returnedQuantity" : {
+          "oneOf" : [ {
+            "type" : "number"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "sellingScheme" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "stockSource" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "productPrice" : {
+          "oneOf" : [ {
+            "type" : "number"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "lineAmount" : {
+          "oneOf" : [ {
+            "type" : "number"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "currency" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "markingFlag" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "operations" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/record:org.apache.nifi.operationsType"
+            }
+          } ]
+        },
+        "source" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/record:org.apache.nifi.sourceType"
+            }
+          } ]
+        }
+      }
+    },
+    "record:org.apache.nifi.operationsType" : {
+      "type" : "object",
+      "required" : [ "operationId", "type", "reason", "quantity", "dmCodes", "timeStamp", "updatedBy" ],
+      "additionalProperties" : false,
+      "properties" : {
+        "operationId" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "type" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "reason" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "quantity" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "number"
+          } ]
+        },
+        "dmCodes" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          } ]
+        },
+        "timeStamp" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "updatedBy" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        }
+      }
+    },
+    "record:org.apache.nifi.sourceType" : {
+      "type" : "object",
+      "required" : [ "type", "items" ],
+      "additionalProperties" : false,
+      "properties" : {
+        "type" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "items" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/record:org.apache.nifi.itemsType"
+            }
+          } ]
+        }
+      }
+    },
+    "record:org.apache.nifi.itemsType" : {
+      "type" : "object",
+      "required" : [ "assignedQuantity" ],
+      "additionalProperties" : false,
+      "properties" : {
+        "assignedQuantity" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "number"
+          } ]
+        }
+      }
+    },
+    "record:org.apache.nifi.linkedObjectsType" : {
+      "type" : "object",
+      "required" : [ "objectType", "objectId", "objectStatus", "objectLines" ],
+      "additionalProperties" : false,
+      "properties" : {
+        "objectType" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "objectId" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "objectStatus" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "objectLines" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/record:org.apache.nifi.objectLinesType"
+            }
+          } ]
+        }
+      }
+    },
+    "record:org.apache.nifi.objectLinesType" : {
+      "type" : "object",
+      "required" : [ "objectLineId", "taskLineId" ],
+      "additionalProperties" : false,
+      "properties" : {
+        "objectLineId" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        },
+        "taskLineId" : {
+          "oneOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string"
+          } ]
+        }
+      }
+    }
+  },
+  "$ref" : "#/definitions/record:org.apache.nifi.nifiRecord"
+}
