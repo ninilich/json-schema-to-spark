@@ -1,0 +1,53 @@
+{
+    "schema": "presale-b2b",
+    "type": "object",
+    "properties":
+    {
+        "operationType":
+        {
+            "type": "string"
+        },
+        "clusterTime":
+        {
+            "type": "string"
+        },
+        "ns":
+        {
+            "type": "object",
+            "properties":
+            {
+                "db": {"type":"string"},
+                "coll": {"type":"string"}
+            }
+        },
+        "documentKey":
+        {
+            "type": "object",
+            "properties":
+            {
+                "_id": {"type":"string"}
+            }
+        },
+        "fullDocument":
+        {
+            "type": "object",
+            "properties":
+            {
+                "_id": {"type":"string"},
+                "projectReferenceId": {"type":"string"},
+                "version": {"type":"integer"},
+                "createdDate": {"type":"string"},
+                "updatedDate": {"type":"string"},
+                "status": {"type":"string"},
+                "source": {"type":"string"},
+                "storeId": {"type":"integer"},
+                "responsible": {"type":"string"},
+                "customer": {"type":"object","properties":{"externalId":{"type":"object","properties":{"system":{"type":"string"},"systemId":{"type":"string"}}}}},
+                "reasonToCancel": {"type":"object","properties":{"reason":{"type":"string"},"specification":{"type":"string"}}},
+                "messages": {"type":"array","items":{"type":"object","properties":{"_id":{"type":"string"},"direction":{"type":"string"},"dateTime":{"type":"string"},"read":{"type":"boolean"},"responsible":{"oneOf":[{"type":"null"},{"type":"string"}]}}}},
+                "_class": {"type":"string"},
+                "updatedBy": {"type":"string"}
+            }
+        }
+    }
+}

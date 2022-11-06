@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/product.schema.json",
+  "title": "Product",
+  "description": "A product from Acme's catalog",
+  "type": "object",
+  "properties": {
+    "productId": {
+      "description": "The unique identifier for a product",
+      "type": "integer"
+    },
+    "productName": {
+      "description": "Name of the product",
+      "type": "string"
+    },
+    "productDesc": {
+      "description": "Description of the product",
+      "type": "string"
+    },
+    "price": {
+      "description": "The price of the product",
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "tags": {
+      "description": "Tags for the product",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "dimensions": {
+      "type": "object",
+      "properties": {
+	    "package": {
+		  "type": "array",
+		  "items": {
+		     "type": "number"
+		  }
+		},
+        "length": {
+          "type": "number",
+		  "default": "10"
+        },
+        "width": {
+          "type": "number",
+		  "default": "10"
+        },
+        "height": {
+          "type": "number",
+		  "default": "10"
+        }
+      }
+    }
+  }
+}

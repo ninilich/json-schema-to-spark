@@ -1,0 +1,5 @@
+{"productId": 1, "productName": "ProductName 1", "price": 10.01, "tags": ["tag 1", "tag 2"], "dimensions": {"length": 10, "width": 12, "height": 12.5}}
+{"productId": 2, "productName": "ProductName 2", "price": 10.01, "tags": ["tag 1", "tag 2"], "dimensions": {"length": 10, "width": 12, "height": 12.5}}
+{"productId": 3, "productName": "ProductName 3", "price": 10.01, "tags": ["tag 1", "tag 2"], "dimensions": {"length": 10, "width": 12, "height": 12.5}}
+{"productId": 4, "productName": "ProductName 4", "price": 10.01, "tags": ["tag 1", "tag 2"], "dimensions": {"length": 10, "width": 12, "height": 12.5}}
+{"productId": 5, "productName": "ProductName 5", "price": 10.01, "tags": ["tag 1", "tag 2"], "dimensions": {"length": 10, "width": 12, "height": 12.5, "package": [10, 20.5, 30]}}
