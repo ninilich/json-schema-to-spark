@@ -22,7 +22,7 @@ You could use ```make``` in terminal:
 - ```make init``` - to prepare the virtual environment and to install all requirements 
 - ```make test``` - to run tests
 - ```make run``` - to run an example ([example.py](example.py))
-- ```make claen``` - to clean project directory
+- ```make clean``` - to clean project directory
 
 # JSON
 
